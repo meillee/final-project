@@ -1,0 +1,177 @@
+main {
+  padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-top: 5rem;
+  }
+}
+
+.about {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding-bottom: 0;
+  }
+}
+
+.portrait {
+  width: 100%;
+}
+
+h1 {
+  padding: 2rem 0;
+}
+
+h1 span {
+  font-family: "Abel", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.text_1 {
+  animation: text1;
+}
+
+.text_2 {
+  animation: text2;
+}
+
+.text_3 {
+  animation: text3;
+}
+
+.text_4 {
+  animation: text4;
+}
+
+.text_5 {
+  animation: text5;
+}
+
+.text_1,
+.text_2,
+.text_3,
+.text_4,
+.text_5 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-flex;
+  position: relative;
+  animation-duration: 60s;
+  animation-timing-function: steps(13, end);
+  animation-iteration-count: infinite;
+}
+
+.text_1::after,
+.text_2::after,
+.text_3::after,
+.text_4::after,
+.text_5::after {
+  content: ".";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 0.9s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text5 {
+  0%,
+  20%,
+  100% {
+    width: 0;
+  }
+  21%,
+  99% {
+    width: 6.75em;
+  }
+}
+
+@keyframes text4 {
+  0%,
+  15%,
+  20%,
+  100% {
+    width: 0;
+  }
+  16%,
+  19% {
+    width: 4.5em;
+  }
+}
+
+@keyframes text3 {
+  0%,
+  10%,
+  15%,
+  100% {
+    width: 0;
+  }
+  11%,
+  14% {
+    width: 7.02em;
+  }
+}
+
+@keyframes text2 {
+  0%,
+  5%,
+  10%,
+  100% {
+    width: 0;
+  }
+  6%,
+  9% {
+    width: 8.05em;
+  }
+}
+
+@keyframes text1 {
+  0%,
+  5%,
+  100% {
+    width: 0;
+  }
+  1%,
+  4% {
+    width: 7.35em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.letter,
+.confirmation {
+  width: 80%;
+}
+
+.confirmation {
+  text-align: center;
+  color: white;
+  background-color: cornflowerblue;
+  border-radius: 16px;
+  padding: 0.5rem 1.5rem;
+}
